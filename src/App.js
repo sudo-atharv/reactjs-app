@@ -45,7 +45,7 @@ function App() {
             <h2>Add Users</h2>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label for="exampleInputUser">User Name</label>
+                <label for="exampleInputUser">Your Name</label>
                 <input type="text" name="name" className="form-control" id="exampleInputUser" value={formData.name} onChange={handleChange} placeholder="Enter user name" />
               </div>
               <div className="form-group">
