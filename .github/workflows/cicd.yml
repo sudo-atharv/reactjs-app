@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and Push Docker Image
         run: |
-          docker build -t satharv/reactjs-app:${{ github.run_number }} -t satharv/reactjs-app:latest .
+          docker build -t satharv/reactjs-app:${{ github.run_number }} -t satharv/reactjs-app:latest --build-arg REACT_APP_NODE_ENV='production' --build-arg REACT_APP_SERVER_BASE_URL='${{ secrets.REACT_APP_SERVER_BASE_URL }}' .
           docker push satharv/reactjs-app:${{ github.run_number }}
           docker push satharv/reactjs-app:latest
  
